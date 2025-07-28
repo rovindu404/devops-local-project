@@ -1,5 +1,4 @@
-# Local DevOps Project for Internship (IFS)
-
+# Local DevOps Project for HOME LAB 101
 ## 🔧 Tech Stack
 - Python + Flask (Web App)
 - Docker (Containerization)
