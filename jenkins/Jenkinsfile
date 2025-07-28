@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/rovindu404/devops-local-project.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t local-devops-app .'
+            }
+        }
+
+        stage('Deploy with Docker Compose') {
+            steps {
+                sh 'docker-compose up -d'
+            }
+        }
+    }
+}
